@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKPOINTGAMER_DH-FICHA TÉCNICA</title>
+    <link rel="stylesheet" href="./assets/css/ficha.css">
+</head>
+
+<body>
+    <div class="container" id="container__bg">
+        <div class="header" id="header__bg">
+            <h1>CHECKPOINTGAMER_DH-FICHA</h1>
+        </div>
+        <div class="details">
+            <h2>descrição</h2>
+            <p>
+                CheckPointerGamer é uma empresa para satisfazer a demanda de componentes para a indústria de consoles,
+                PCs e periféricos. Esta indústria tem um crescimento exponencial e que tende a expandir em função da
+                evolução tecnológica constante. A CheckPointerGamer mantém uma margem competitiva através da entrega
+                rápida de produtos, excelente relação com seus fornecedores e da facilidade de se adequar às suas
+                necessidades.
+                Nessa apresentação falaremos sobre banco de dados da empresa e o relacionamento de suas entidades.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h2>Informações Gerais</h2>
+                <ul>
+                    <li>
+                        Nome do Banco de Dados
+                        <ol>
+                            <li>CHECKPOINTGAMER_DH</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Tipo
+                        <ol>
+                            <li>Relacional</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        SGBD
+                        <ol>
+                            <li>MySQL</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Nº Entidades
+                        <ol>
+                            <li>12</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Nº Views
+                        <ol>
+                            <li>2</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Nº Procedures
+                        <ol>
+                            <li>1</li>
+                        </ol>
+                    </li>
+
+                </ul>
+            </div>
+            <!--END CARD 1-->
+
+            <div class="card">
+                <h2>Entidades</h2>
+                <ul>
+                    <li>
+                        Usuarios
+                        <ol>[
+                            id, nome_usuario, email_usuario, senha_usuario, is_admin
+                            ]</ol>
+                    </li>
+                    <li>
+                        Informacoes
+                        <ol>[
+                            id, id_usuario, data_nasc_usuario, cpf_usuario, fone1_usuario, fone2_usuario
+                            ]</ol>
+                    </li>
+                    <li>
+                        Enderecos
+                        <ol>[
+                            id, id_usuario, endereco_usuario, bairro_usuario, numero_usuario, cidade_usuario,
+                            estado_usuario
+                            ]</ol>
+                    </li>
+                    <li>
+                        Fornecedores
+                        <ol>[
+                            id, nome_fornecedor, fone1_fornecedor, fone2_fornecedor, email_fornecedor, site_fornecedor,
+                            instagram_fornecedor
+                            ]</ol>
+                    </li>
+                    <li>
+                        Categorias
+                        <ol>[
+                            id, nome_categoria
+                            ]</ol>
+                    </li>
+                    <li>
+                        Produtos
+                        <ol>[
+                            id, id_fornecedor, nome_produto, quantidade_produto, custo_produto, preco_produto,
+                            peso_produto, altura_produto, largura_produto, comprimento_produto
+                            ]</ol>
+                    </li>
+                    <li>
+                        Produtos_Categorias
+                        <ol>[
+                            id, id_produto, id_categoria
+                            ]</ol>
+                    </li>
+                    <li>
+                        Imagens
+                        <ol>[
+                            id, id_produto, nome_imagem, pasta_imagem
+                            ]</ol>
+                    </li>
+                    <li>
+                        Vendas
+                        <ol>[
+                            id, id_usuario, data_venda, valor_total, valor_desconto_venda, valor_frete_venda
+                            ]</ol>
+                    </li>
+                    <li>
+                        Vendas_Produtos
+                        <ol>[
+                            id, id_produto, id_venda
+                            ]</ol>
+                    </li>
+                    <li>
+                        Cartoes
+                        <ol>[
+                            id, titular_cartao, numero_cartao, vencimento_cartao, bandeira
+                            ]</ol>
+                    </li>
+                    <li>
+                        Vendas_Cartoes
+                        <ol>[
+                            id, id_venda, id_cartao
+                            ]</ol>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Views</h2>
+                <ul>
+                    <li>
+                        HISTORICO_COMPRA
+                        <ol>
+                            <li>
+                                Realiza uma busca pelos clientes cadastrados e suas respectivas compras como também a
+                                data e hora de compra.
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        CLIENTES_ANIVERSARIOS
+                        <ol>
+                            <li>
+                                Realiza uma busca pelos clientes cadastrados que fazem aniversario no mês atual.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+                <h2>Procedures</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
